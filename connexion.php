@@ -24,13 +24,13 @@ catch(Exception $e)
 .error {color: #FF0000;}
 </style>
 
-	<body>
+<body>
 
 	<?php
 
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$passErr = $emailErr = "";
+$pass = $email = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (empty($_POST["email"])) {
@@ -66,32 +66,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 
 ?>
-		<div>
-				<h2>Welcome Back</h2>
+	<div>
+		<h2>Welcome Back</h2>
 
-		<p><span class="error">* champs requis</span></p>
+			<p><span class="error">* champs requis</span></p>
 
-			<div id="container_connexion" class="ls-0_5">
-				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="form_container">
-					<div class="form_container">
-						<label for="email">Entrez votre adresse e-mail : </label>
-							<input type="email" name="email" id="email" placeholder="adresse mail" 
-							pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="30" required
-							value ="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span>
-					</div>
-					
-					<div class="form_container">
-						<label for="pass">Entrez votre mot de passe : </label>
-							<input type="password" name="pass" id="pass" placeholder="mot de passe" minlength="7" 
-							required
-							value ="<?php echo $pass;?>"><span class="error">* <?php echo $passErr;?></span>
-					</div>
+		<div id="container_connexion" class="ls-0_5">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="form_container">
+				<div class="form_container">
+					<label for="email">Entrez votre adresse e-mail : </label>
+						<input type="email" name="email" id="email" placeholder="adresse mail" 
+						pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="30" required
+						value ="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span>
+				</div>
+				
+				<div class="form_container">
+					<label for="pass">Entrez votre mot de passe : </label>
+						<input type="password" name="pass" id="pass" placeholder="mot de passe" minlength="7" 
+						required
+						value ="<?php echo $pass;?>"><span class="error">* <?php echo $passErr;?></span>
+				</div>
 
-					<div class="form_container">
-							<input class="connexion_button" type="submit" value="Connexion">
-					</div>
-				</form>
-			</div>
+				<div class="form_container">
+						<input class="connexion_button" type="submit" value="Connexion">
+				</div>
+			</form>
+		</div>
 
 			<?php
 
@@ -101,6 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			echo $pass;
 
 			?>
-		</div>
-	</body>
+	</div>
+</body>
 </html>
