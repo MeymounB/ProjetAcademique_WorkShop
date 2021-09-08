@@ -1,0 +1,42 @@
+*{
+    margin : 0;
+    padding : 0;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+.ls-0_5{
+letter-spacing: 0.5px;
+}
+
+form.form_container {
+display: table;
+}
+
+div.form_container {
+display: table-row;
+}
+
+label, input {
+display: table-cell;
+margin-bottom: 15px;
+}
+
+label {
+padding-right: 10px;
+}
+
+#container_connexion{
+    margin: 20px;
+    padding: 15px;
+
+    max-width: 600px;
+    max-height: 300px;
+
+    border: 1px solid #000000;
+   
+    display: block;
+}
+
+.connexion_button{
+    padding: 2px;
+}
