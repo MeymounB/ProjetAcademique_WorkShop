@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div className="page">	
-		<div className="contours container">
+		<div className="container">
 			<div className="banniere flexRow flexCol justify-sb align-center">
 				 
 					<img src="babyfoot_battle_titre.png" className="image" alt="titre">
