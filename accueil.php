@@ -12,8 +12,13 @@
 <body>
 	<div className="page container">	
 		<div className="contours">
-			<div className="banniere">
-				
+			<div className="banniere flexRow flexCOl justify-sb align-center">
+				<div>
+					<img src="babyfoot_battle_titre.png" alt="titre">
+				</div>
+				<div>
+					<img src="stormtroupers_battle.png" alt="bannière">
+				</div>
 			</div>	
 				<section className="bloc flexRow flexCol justify-sb align-center">
 					<article className="explications">
