@@ -19,74 +19,72 @@ catch(Exception $e)
 	<title>WorkShop</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+
+<style>
+.error {color: #FF0000;}
+</style>
+
 	<body>
 
-	<?php 
+	<?php
 
-//INSCRIPTION
-	
-// Vérification de la validité des informations
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
 
-// Hachage du mot de passe
-/* $pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-
-// Insertion
-$req = $bdd->prepare('INSERT INTO membres(pseudo, pass, email, date_inscription) VALUES(:pseudo, :pass, :email, CURDATE())');
-$req->execute(array(
-    'identifiant' => $identifiant,
-    'pass' => $pass_hache));
-
-//CONNEXION 
-
-    //  Récupération de l'utilisateur et de son pass hashé
-    $req = $bdd->prepare('SELECT id, pass FROM membres WHERE pseudo = :pseudo');
-    $req->execute(array(
-	'pseudo' => $pseudo));
-    $resultat = $req->fetch();
-    
-    // Comparaison du pass envoyé via le formulaire avec la base
-    $isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']);
-    
-    if (!$resultat)
-    {
-	echo 'Mauvais identifiant ou mot de passe !';
-    }
-    else
-    {
-	if ($isPasswordCorrect) {
-	    session_start();
-	    $_SESSION['id'] = $resultat['id'];
-	    $_SESSION['pseudo'] = $pseudo;
-	    echo 'Vous êtes connecté !';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	if (empty($_POST["email"])) {
+		$emailErr = "L'adresse mail est necessaire";
+	      } else {
+		$email = test_input($_POST["email"]);
+		// check if e-mail address is well-formed
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		  $emailErr = "Le format de l'adresse mail est invalide";
+		}
+	      }
+	if (empty($_POST["pass"])) {
+	$passErr = "Le mot de passe est necessaire";
+	} else {
+	$pass = test_input($_POST["pass"]);
+	// check if pass is well-formed
+	if (!preg_match("/^[a-zA-Z-' ]*$/", $pass)) {
+		$passErr = "Le format du mot de passe est invalide";
 	}
-	else {
-	    echo 'Mauvais identifiant ou mot de passe !';
 	}
-    }
-*/
-	?>
+}	
 
-<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$pass = test_input($_POST["pass"]);
+	$email = test_input($_POST["email"]);
+	}
 
-$pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+	function test_input($data) {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+	}
 
-	$req = $bdd->prepare('INSERT INTO membres(email, pass, date_inscription) VALUES(:email, :pass, CURDATE())');
-	$req->execute(array(
-		'pass' => $pass_hache,
-		'email' => $email));
 ?>
 		<div>
+				<h2>Welcome Back</h2>
+
+		<p><span class="error">* champs requis</span></p>
 
 			<div id="container_connexion" class="ls-0_5">
-				<form action="" method="POST" class="form_container">
+				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="form_container">
 					<div class="form_container">
 						<label for="email">Entrez votre adresse e-mail : </label>
-							<input type="email" name="email" id="email" placeholder="adresse mail" pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="30" required>
+							<input type="email" name="email" id="email" placeholder="adresse mail" 
+							pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="30" required
+							value ="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span>
 					</div>
-
+					
 					<div class="form_container">
-						<label for="password">Entrez votre mot de passe : </label>
-							<input type="password" name="password" id="pass" placeholder="mot de passe" minlength="7" required>
+						<label for="pass">Entrez votre mot de passe : </label>
+							<input type="password" name="pass" id="pass" placeholder="mot de passe" minlength="7" 
+							required
+							value ="<?php echo $pass;?>"><span class="error">* <?php echo $passErr;?></span>
 					</div>
 
 					<div class="form_container">
@@ -94,7 +92,15 @@ $pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 					</div>
 				</form>
 			</div>
+
+			<?php
+
+			echo "<h2>Your Input:</h2>";
+			echo $email;
+			echo "<br>";
+			echo $pass;
+
+			?>
 		</div>
 	</body>
 </html>
-
