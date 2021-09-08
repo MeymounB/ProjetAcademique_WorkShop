@@ -28,7 +28,7 @@ catch(Exception $e)
 // Vérification de la validité des informations
 
 // Hachage du mot de passe
-$pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+/* $pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
 // Insertion
 $req = $bdd->prepare('INSERT INTO membres(pseudo, pass, email, date_inscription) VALUES(:pseudo, :pass, :email, CURDATE())');
@@ -63,26 +63,36 @@ $req->execute(array(
 	    echo 'Mauvais identifiant ou mot de passe !';
 	}
     }
-
+*/
 	?>
+
+<?php
+
+$pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+
+	$req = $bdd->prepare('INSERT INTO membres(email, pass, date_inscription) VALUES(:email, :pass, CURDATE())');
+	$req->execute(array(
+		'pass' => $pass_hache,
+		'email' => $email));
+?>
 		<div>
 
-			<div>
-			<form action="" method="get" class="form_co">
-				<div class="form_container">
-					<label for="identifiant">Entrez votre identifiant: </label>
-						<input type="text" name="identifiant" id="identifiant" placeholder="adresse mail" required>
-				</div>
+			<div id="container_connexion" class="ls-0_5">
+				<form action="" method="POST" class="form_container">
+					<div class="form_container">
+						<label for="email">Entrez votre adresse e-mail : </label>
+							<input type="email" name="email" id="email" placeholder="adresse mail" pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="30" required>
+					</div>
 
-				<div class="form_container">
-					<label for="email">Entrez votre mot de passe: </label>
-						<input password_hash type="passeword" name="password" id="password" placeholder="mot de passe" required>
-				</div>
+					<div class="form_container">
+						<label for="password">Entrez votre mot de passe : </label>
+							<input type="password" name="password" id="pass" placeholder="mot de passe" minlength="7" required>
+					</div>
 
-				<div class="form_container">
-						<input type="submit" value="Connexion">
-				</div>
-			</form>
+					<div class="form_container">
+							<input class="connexion_button" type="submit" value="Connexion">
+					</div>
+				</form>
 			</div>
 		</div>
 	</body>
