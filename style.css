@@ -1,42 +1,127 @@
-*{
-    margin : 0;
-    padding : 0;
-    font-family: 'Ubuntu', sans-serif;
-  }
-
-.ls-0_5{
-letter-spacing: 0.5px;
+.primarycolor{
+	color : rgb(252, 36, 28)
 }
 
-form.form_container {
-display: table;
+.secondarycolor{
+	color: rgb(39, 39, 47);
 }
 
-div.form_container {
-display: table-row;
+.thirdcolor{
+	color: rgb(192, 192, 194);
 }
 
-label, input {
-display: table-cell;
-margin-bottom: 15px;
+.primarycolorBG{
+	color:rgb(20, 21, 24)
 }
 
-label {
-padding-right: 10px;
+.font-10{
+font-size: 10px;
 }
 
-#container_connexion{
-    margin: 20px;
-    padding: 15px;
-
-    max-width: 600px;
-    max-height: 300px;
-
-    border: 1px solid #000000;
-   
-    display: block;
+.font-12{
+font-size: 12px;
 }
 
-.connexion_button{
-    padding: 2px;
+.font-14{
+font-size: 14px;
+}
+
+.font-16{
+font-size: 16px;
+}
+
+.font-18{
+font-size: 18px;
+}
+
+.font-20{
+font-size: 20px;
+}
+
+.font-25{
+font-size: 25px;
+}
+
+.font-30{
+font-size: 30px;
+}
+
+.bold-300{
+font-weight: 300;
+}
+
+.bold-400{
+font-weight: 400;
+}
+
+.bold-500{
+font-weight: 500;
+}
+
+.bold-600{
+font-weight: 600;
+}
+
+.bold-700{
+font-weight: 700;
+}
+
+.uppercase{
+text-transform: uppercase;
+}
+
+.capitalize{
+text-transform: capitalize;
+}
+.m-auto{
+margin:"0 auto";
+}
+.ls-1{
+letter-spacing: 1px;
+}
+
+.mtb-10{ /*margintopbot*/
+margin: 10px 0;
+}
+
+.mlr-10{
+margin: 0 10px;
+}
+
+.ptb-10{
+padding: 10px 0;
+}
+
+.plr-10{
+padding: 0 10px;
+}
+
+.flexRow{
+display: flex;
+}
+
+.justify-sb{
+justify-content: space-between;
+}
+
+.align-center{
+align-items: center;
+}
+
+.text-center{
+text-align: center;
+}
+
+.container{
+width: 900px; 
+margin: 0 auto;
+position: relative;
+}
+
+.wrap{
+flex-wrap: wrap;
+}
+
+a{
+text-decoration:none;
 }

@@ -16,8 +16,9 @@ catch(Exception $e)
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>WorkShop</title>
+	<title>Connexion WorkShop B2</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style_connexion.css">
 </head>
 
 <style>
@@ -72,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<p><span class="error">* champs requis</span></p>
 
 		<div id="container_connexion" class="ls-0_5">
-			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="form_container">
+			<form action="<?php echo htmlspecialchars("accueil.php");?>" method="POST" class="form_container">
 				<div class="form_container">
 					<label for="email">Entrez votre adresse e-mail : </label>
 						<input type="email" name="email" id="email" placeholder="adresse mail" 
@@ -94,13 +95,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		</div>
 
 			<?php
-
+			/*
 			echo "<h2>Your Input:</h2>";
 			echo $email;
 			echo "<br>";
-			echo $pass;
-
-			?>
+			echo $pass;	
+			*/
+			?> 
 	</div>
 </body>
 </html>
