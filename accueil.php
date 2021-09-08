@@ -10,21 +10,23 @@
 	
 </head>
 <body>
-	<div className="page container">	
-		<div className="contours">
-			<div className="banniere flexRow flexCOl justify-sb align-center">
-				<div>
-					<img src="babyfoot_battle_titre.png" alt="titre">
+	<div className="page">	
+		<div className="contours container">
+			<div className="banniere flexRow flexCol justify-sb align-center">
+				 
+					<img src="babyfoot_battle_titre.png" className="image" alt="titre">
+				
+					<img src="stormtroupers_battle.png" className="image" alt="bannière">
 				</div>
-				<div>
-					<img src="stormtroupers_battle.png" alt="bannière">
-				</div>
-			</div>	
 				<section className="bloc flexRow flexCol justify-sb align-center">
 					<article className="explications">
 
 					</article>
 						<div className="scratch">
+						<iframe src="https://scratch.mit.edu/projects/567875622/embed" 
+							allowtransparency="true" width="485" height="402" 
+							frameborder="0" scrolling="no" allowfullscreen></iframe>
+
 							<article className="commandes">
 
 							</article>

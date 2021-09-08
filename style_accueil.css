@@ -5,7 +5,7 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 body{
-	background: url(./background_starwars.jpg);
+	background: url(./background_starwars.png);
 	background-repeat: repeat;
 }
 
@@ -18,7 +18,12 @@ body{
 }
 
 .banniere{
+	display: block;
+	pa
+}
 
+.image{
+	width: 100%;
 }
 
 .bloc{
