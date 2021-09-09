@@ -83,7 +83,7 @@ label {
 }
 
 #container_connexion {
-
+    background-color: rgba(0, 0, 0, 0.5);
     margin-top: 100px;
     margin-bottom: 500px;
     margin-right: 500px;
@@ -96,5 +96,9 @@ label {
 }
 
 .connexion_button {
-    padding: 2px;
+    background-color: red;
+    border-style: none;
+    color: white;
+    height: 50px;
+    width: 395px;
 }
