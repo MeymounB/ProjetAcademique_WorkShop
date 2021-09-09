@@ -1,6 +1,6 @@
 @font-face {
     font-family: "StarJedi";
-    src: url("./Starjedi.ttf");
+    src: url(./Starjedi.ttf);
 }
 
 * {
@@ -11,7 +11,7 @@
 
 body {
 
-    background-image: url("frontt.png");
+    background-image: url(/images/front.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
