@@ -4,6 +4,18 @@
     font-family: 'Ubuntu', sans-serif;
   }
 
+  body{
+
+    background-image: url("front.png");
+    background-size: 1200px;
+    background-repeat: no-repeat;
+    }
+
+#hello{
+    background-color: white;
+
+}
+
 .ls-0_5{
 letter-spacing: 0.5px;
 }
@@ -26,13 +38,17 @@ padding-right: 10px;
 }
 
 #container_connexion{
-    margin: 20px;
-    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    margin-left: 300px;
+    margin: auto;
+    max-width: 300px;
+    max-height: 400px;
 
-    max-width: 600px;
-    max-height: 300px;
-
-    border: 1px solid #000000;
+    border: 1px solid #FFFFFF;
    
     display: block;
 }
