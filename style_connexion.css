@@ -45,6 +45,7 @@ body {
 #pass {
     background-color: transparent;
     border-style: none;
+    color: red;
 }
 
 .form_container2 {
@@ -58,10 +59,17 @@ body {
 
 #text_email {
     color: ghostwhite;
+    padding-left: 5px;
+    padding-top: 4px;
+    font-size: 13px;
 }
 
 #text_pass {
     color: ghostwhite;
+    padding-left: 5px;
+    padding-top: 4px;
+    font-size: 13px;
+    
 }
 
 .error {
