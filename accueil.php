@@ -9,8 +9,18 @@
 	<link rel="stylesheet" href="style_accueil.css">
 	
 </head>
-<body>
 
+<?php
+	session_start();
+
+	// Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+
+	if(!isset($_SESSION["username"])){
+		header("Location: connexion.php");
+		exit(); }
+?>
+<body>
+		<!-- css : faire des carrés en opacity : 0,40 pour les div-->
 	<div class="page">
 
 	<nav>

@@ -18,6 +18,8 @@
 
 	<?php
 
+session_start();
+
 // define variables and set to empty values
 $passErr = $emailErr = "";
 $pass = $email = "";
@@ -66,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<div class="form_container">
 					<label for="email">Entrez votre adresse e-mail : </label>
 						<input type="email" name="email" id="email" placeholder="adresse mail" 
-						pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="30" required
+						pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="40" required
 						value ="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span>
 				</div>
 				
@@ -89,25 +91,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			include ("connect.php");
 
 			//on vérifie que le visiteur a correctement saisi puis envoyé le formulaire
-			if ((isset($_POST['email']) && !empty($_POST['email'])) && (isset($_POST['pass']) && !empty($_POST['pass']))) {
+			 if ((isset($_POST['email']) && !empty($_POST['email'])) && (isset($_POST['pass']) && !empty($_POST['pass']))) {
 
 			//on se connecte à la bdd
 			$bdd = new PDO('mysql:host=localhost;dbname=workshop;charset=utf8', 'root', '');
 			if (!$bdd) {echo "LA CONNEXION AU SERVEUR MYSQL A ECHOUE\n"; exit;};
 
-			$requete = $bdd->prepare("INSERT into membres(email, pass)
-							VALUES(?,?)");
+			// $requete = $bdd->prepare("INSERT into membres(email, pass)
+			// 				VALUES(?,?)");
 
-			$requete->execute([$_POST['email'],$_POST['pass']]);
-			header('Location: accueil.php');}
-
-			// $lignes = $requete->fetchAll();
+			// $requete->execute([$_POST['email'],$_POST['pass']]);
+			// header('Location: accueil.php');}
 
 			// foreach ($lignes as $ligne)
 			// {
 			// $id = $ligne['email'];
 			// $mavariable = $ligne['pass'];
 			// }
+
+			$requete = $bdd->prepare("SELECT pk FROM membres WHERE email=? AND pass=?");
+				$requete->execute([$_POST['email'],$_POST['pass']]);
+				$lignes = $requete->fetchAll();
+
+			if (count($lignes) > 0){
+				header('Location: accueil.php');
+			}
+			else{
+				echo 'connexion échouée';
+			}
+			}
+
 
 			// var_dump($lignes);
 

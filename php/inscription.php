@@ -10,6 +10,49 @@
 	<link rel="stylesheet" href="style_connexion.css">
 </head>
 
+<?php
+	
+session_start();
+
+// define variables and set to empty values
+$passErr = $emailErr = "";
+$pass = $email = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	if (empty($_POST["email"])) {
+		$emailErr = "L'adresse mail est necessaire";
+	      } else {
+		$email = test_input($_POST["email"]);
+		// check if e-mail address is well-formed
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		  $emailErr = "Le format de l'adresse mail est invalide";
+		}
+	      }
+	if (empty($_POST["pass"])) {
+	$passErr = "Le mot de passe est necessaire";
+	} else {
+	$pass = test_input($_POST["pass"]);
+	// check if pass is well-formed
+	if (!preg_match("/^[a-zA-Z-' ]*$/", $pass)) {
+		$passErr = "Le format du mot de passe est invalide";
+	}
+	}
+}	
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$pass = test_input($_POST["pass"]);
+	$email = test_input($_POST["email"]);
+	}
+
+	function test_input($data) {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+	}
+
+?>
+
 <style>
 .error {color: #FF0000;}
 </style>
@@ -26,7 +69,7 @@
 				<div class="form_container">
 					<label for="email">Adresse e-mail : </label>
 						<input type="email" name="email" id="email" placeholder="adresse mail" 
-						pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="30" required
+						pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="40" required
 						value =""><span class="error">*</span>
 				</div>
 				
@@ -45,7 +88,6 @@
 
 			<?php
 			
-
 			//on inclue un fichier contenant nom_de_serveur, nom_bdd, login et password d'accès à la bdd mysql
 			include ("connect.php");
 
@@ -54,47 +96,14 @@
 
 			//on se connecte à la bdd
 			$bdd = new PDO('mysql:host=localhost;dbname=workshop;charset=utf8', 'root', '');
-			if (!$bdd) {echo "LA CONNEXION AU SERVEUR MYSQL A ECHOUE\n"; exit;}
+			if (!$bdd) {echo "LA CONNEXION AU SERVEUR MYSQL A ECHOUE\n"; exit;};
 
 			$requete = $bdd->prepare("INSERT into membres(email, pass)
 							VALUES(?,?)");
 
 			$requete->execute([$_POST['email'],$_POST['pass']]);
-			header('Location: accueil.php');
-			// $lignes = $requete->fetchAll();
+			header('Location: accueil.php');}
 
-			// foreach ($lignes as $ligne)
-			// {
-			// $id = $ligne['email'];
-			// $mavariable = $ligne['pass'];
-			// }
-
-			// var_dump($lignes);
-
-			// si on obtient une réponse, alors l'utilisateur est un membre
-			//on ouvre une session pour cet utilisateur et on le connecte à l'espace membre
-			if ($data[0] == 1){
-			session_start();
-			$_SESSION['email'] = $_POST['email'];
-			header('Location: accueil.php');
-			exit();}
-
-			//si le visiteur a saisi un mauvais login ou mot de passe, on ne trouve aucune réponse
-			elseif ($data[0] == 0) {
-			$erreur= 'Email ou mot de passe non reconnu ! ';echo $erreur;
-			echo"<br/><a href=\"accueil.php\">Accueil</a>";exit();}
-
-			// sinon, il existe un problème dans la base de données
-			else {
-			$erreur= 'Plusieurs membres ont<br/>les memes email et mot de passe ! ';echo $erreur;
-			echo"<br/><a href=\"accueil.php\">Accueil</a>";exit();}}
-			else {
-			$erreur= 'Errreur de saisie !<br/>Au moins un des champs est vide ! '; echo $erreur;
-			echo"<br/><a href=\"accueil.php\">Accueil</a>";exit();}
-
-			// if (isset($_POST['email'])){
-			// 	echo $_POST['email'];
-			// }
 			?> 
 	</div>
 </body>
