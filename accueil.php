@@ -11,9 +11,18 @@
 </head>
 <body>
 
-	<div class="page">	
+	<div class="page">
 
-	<a href="espace_membre.php" style="position : absolute; top : 0; right: 0; z-index: 9999;">Compte Battle</a>
+	<nav>
+		<ul>
+			<li class="deroulant"><a href="#">Compte Battle &ensp;</a>
+				<ul class="sous">
+					<li><a href="espace_membre.php">Profil</a></li>
+					<li><a href="#">Deconnexion</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
 
 		<div class="container">
 			<div class="banniere container flexRow flexCol justify-sb align-center">
@@ -29,12 +38,14 @@
 						<div class="scratch flexRow flexCol justify-sb align-center" style="margin:50px 0px;">
 							<div><iframe src="https://scratch.mit.edu/projects/567875622/embed" 
 							allowtransparency="true"
-							frameborder="0" scrolling="no" style="min-width =400px; min-height=402px;" allowfullscreen></iframe></div>
+							frameborder="0" scrolling="no" style="min-height: 402px; min-width: 470px;" 
+							allowfullscreen></iframe></div>
+
 
 							<div class="commandes ls-1 primarycolor">
 								<h2>Les commandes sont divisés en deux parties : </h2>
 								<div class="flexRow flexCol justify-sb align-center">
-									<div class="thirdcolor">
+									<div class="thirdcolor" style="margin: right 10px;">
 										<p>Le camp des noirs à pour touches :</p> 
 									
 										<ul>
@@ -57,7 +68,7 @@
 
 									</div>
 
-									<div class="thirdcolor">
+									<div class="thirdcolor" style="margin: left 10px;">
 										<p>Le camp des blancs à pour tocuhes :</p>
 
 										<ul>
@@ -85,6 +96,10 @@
 								</div>
 						</div>
 				</section>
+
+		</div>
+
+		<div class="credit">
 
 		</div>
 	</div>
