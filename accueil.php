@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Accueil WorkShop B2</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="style_accueil.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/style_accueil.css">
 	
 </head>
 
@@ -27,7 +27,7 @@
 		<ul>
 			<li class="deroulant"><a href="#">Compte Battle &ensp;</a>
 				<ul class="sous">
-					<li><a href="espace_membre.php">Profil</a></li>
+					<li><a href="/php/espace_membre.php">Profil</a></li>
 					<li><a href="#">Deconnexion</a></li>
 				</ul>
 			</li>
