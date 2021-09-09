@@ -25,12 +25,18 @@
 
 	<nav>
 		<ul>
-			<li class="deroulant"><a href="#">Compte Battle &ensp;</a>
-				<ul class="sous">
-					<li><a href="espace_membre.php">Profil</a></li>
-					<li><a href="#">Deconnexion</a></li>
-				</ul>
-			</li>
+			<div id= "battle" >
+				<li class="deroulant"><a href="#">Compte Battle &ensp;</a>
+					<ul class="sous">
+						<div class="deco">
+							<li ><a href="espace_membre.php">Profil</a></li>
+						</div>
+						<div class="deco">
+
+							<li ><a href="#">Deconnexion</a></li>
+				
+						</div>
+			</div>
 		</ul>
 	</nav>
 

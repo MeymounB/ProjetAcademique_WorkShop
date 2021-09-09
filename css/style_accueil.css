@@ -9,14 +9,31 @@ body {
 	background-repeat: repeat;
 }
 
+#battle {
+	border-radius: 15px;
+	border: solid 1px white;
+	background: rgb(200, 36, 28) 0% 0% no-repeat padding-box;
+	backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+	font-size: 15px;
+}
+
+.deco {
+	border-radius: 15px;
+	border: solid 1px white;
+	background: rgb(252, 36, 28) 0% 0% no-repeat padding-box;
+	opacity: 0.59;
+	backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+	font-size: 15px;
+}
+
 .page {
 	margin-top: 70px;
 }
 
 nav {
 	width: 150px;
-	/*margin: 0 auto;*/
-	/*background-color: ;*/
 	position: fixed;
 	top: 20px;
 	right: 20px;
@@ -37,23 +54,27 @@ nav ul li {
 nav a {
 	display: block;
 	text-decoration: none;
-	color: rgb(192, 192, 194);
+	color: white;
 	border-bottom: 2px solid transparent;
-	padding: 10px 0px;
+	padding: 10px 10px;
 }
 
 nav a:hover {
 	color: rgb(252, 36, 28);
-	border-bottom: 2px solid rgb(33, 202, 194);
+	border-bottom: 1px solid white;
 }
 
 .sous {
 	display: none;
-	box-shadow: 0px 1px 2px #CCC;
-	background-color: rgb(20, 21, 24);
 	position: absolute;
 	width: 100%;
 	z-index: 1000;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 11px 5px 43px #00000029;
+	border-radius: 17px;
+	opacity: 1;
+	backdrop-filter: blur(41px);
+	-webkit-backdrop-filter: blur(41px);
 }
 
 nav>ul li:hover .sous {
