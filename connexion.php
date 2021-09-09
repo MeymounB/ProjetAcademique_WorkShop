@@ -67,14 +67,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<label for="email" id="text_email">Entrez votre adresse e-mail : </label>
 						<input type="email" name="email" id="email" placeholder="adresse mail" 
 						pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="30" required
-						value ="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span>
+						value =""><span class="error">* </span>
 				</div>
 				
 				<div class="form_container2">
 					<label for="pass" id="text_pass">Entrez votre mot de passe : </label>
 						<input type="password" name="pass" id="pass" placeholder="mot de passe" minlength="7" 
 						required
-						value ="<?php echo $pass;?>"><span class="error">* <?php echo $passErr;?></span>
+						value =""><span class="error">* </span>
 				</div>
 
 				<div class="form_container">
