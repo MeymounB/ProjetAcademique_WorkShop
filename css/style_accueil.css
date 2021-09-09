@@ -99,11 +99,16 @@ nav>ul li:hover .sous {
 
 }
 
-/*
-.commandes{
 
+.commandes {
+	padding: 25px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border: 1px solid white;
+	box-sizing: border-box;
+	box-shadow: rgb(97, 242, 245) 0px 0px 10px 0px;
 }
 
+/*
 .conclusion{
 
 }

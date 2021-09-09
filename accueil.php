@@ -15,7 +15,7 @@
 
 	// // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
 
-	// if(!isset($_SESSION["username"])){
+	// if(!isset($_SESSION["email"])){
 	// 	header("Location: connexion.php");
 	// 	exit(); }
 ?>
@@ -52,9 +52,7 @@
 							allowfullscreen></iframe></div>
 
 
-							<div class="commandes ls-1 primarycolor" style="padding: 25px;
-													background-color: rgba(0,0,0,0.5); 
-													border: 1px solid white;">
+							<div class="commandes ls-1 primarycolor">
 								<h2>Les commandes sont divisés en deux parties : </h2>
 								<div class="flexRow flexCol justify-sb align-center">
 									<div class="thirdcolor" style="margin-right: 10px;">
