@@ -84,12 +84,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		</div>
 
 			<?php
-			/*
-			echo "<h2>Your Input:</h2>";
-			echo $email;
-			echo "<br>";
-			echo $pass;	
-			*/
 
 			//on inclue un fichier contenant nom_de_serveur, nom_bdd, login et password d'accès à la bdd mysql
 			include ("connect.php");
@@ -99,13 +93,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 			//on se connecte à la bdd
 			$bdd = new PDO('mysql:host=localhost;dbname=workshop;charset=utf8', 'root', '');
-			if (!$bdd) {echo "LA CONNEXION AU SERVEUR MYSQL A ECHOUE\n"; exit;}
+			if (!$bdd) {echo "LA CONNEXION AU SERVEUR MYSQL A ECHOUE\n"; exit;};
 
 			$requete = $bdd->prepare("INSERT into membres(email, pass)
 							VALUES(?,?)");
 
 			$requete->execute([$_POST['email'],$_POST['pass']]);
-			header('Location: accueil.php');
+			header('Location: accueil.php');}
+
 			// $lignes = $requete->fetchAll();
 
 			// foreach ($lignes as $ligne)
@@ -116,30 +111,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 			// var_dump($lignes);
 
-			// si on obtient une réponse, alors l'utilisateur est un membre
-			//on ouvre une session pour cet utilisateur et on le connecte à l'espace membre
-			
-			session_start();
-			$_SESSION['email'] = $_POST['email'];
-			header('Location: accueil.php');
-			exit();
-
-			//si le visiteur a saisi un mauvais login ou mot de passe, on ne trouve aucune réponse
-			elseif ($data[0] == 0) {
-			$erreur= 'Email ou mot de passe non reconnu ! ';echo $erreur;
-			echo"<br/><a href=\"accueil.php\">Accueil</a>";exit();}
-
-			// sinon, il existe un problème dans la base de données
-			else {
-			$erreur= 'Plusieurs membres ont<br/>les memes email et mot de passe ! ';echo $erreur;
-			echo"<br/><a href=\"accueil.php\">Accueil</a>";exit();}}
-			else {
-			$erreur= 'Errreur de saisie !<br/>Au moins un des champs est vide ! '; echo $erreur;
-			echo"<br/><a href=\"accueil.php\">Accueil</a>";exit();}
-
-			// if (isset($_POST['email'])){
-			// 	echo $_POST['email'];
-			// }
 			?> 
 	</div>
 </body>
