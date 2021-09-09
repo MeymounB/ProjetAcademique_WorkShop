@@ -13,7 +13,7 @@
 
 	<div class="page">	
 
-	<a href="espace_membre.php" style="position : absolute; top : 0; right: 0; z-index: 9999;">Compte</a>
+	<a href="espace_membre.php" style="position : absolute; top : 0; right: 0; z-index: 9999;">Compte Battle</a>
 
 		<div class="container">
 			<div class="banniere container flexRow flexCol justify-sb align-center">
@@ -27,12 +27,13 @@
 
 					</div>
 						<div class="scratch flexRow flexCol justify-sb align-center" style="margin:50px 0px;">
-							<iframe src="https://scratch.mit.edu/projects/567875622/embed" 
-							allowtransparency="true" width="53%" height="402" 
-							frameborder="0" scrolling="no" allowfullscreen style="display: block;"></iframe>
+							<div><iframe src="https://scratch.mit.edu/projects/567875622/embed" 
+							allowtransparency="true"
+							frameborder="0" scrolling="no" style="min-width =400px; min-height=402px;" allowfullscreen></iframe></div>
 
 							<div class="commandes ls-1 primarycolor">
 								<h2>Les commandes sont divisés en deux parties : </h2>
+								<div class="flexRow flexCol justify-sb align-center">
 									<div class="thirdcolor">
 										<p>Le camp des noirs à pour touches :</p> 
 									
@@ -77,6 +78,7 @@
 												</ul>
 										</ul>
 									</div>
+								</div>
 							</div>
 								<div class="conclusion">
 
