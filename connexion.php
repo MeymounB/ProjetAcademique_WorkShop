@@ -61,16 +61,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 			<p><span class="error">* champs requis</span></p>
 
-		<div id="container_connexion" class="ls-0_5">
+		<div id="container_connexion" class="ls-0_5 taille_border">
 			<form action="connexion.php" method="POST">
-				<div class="form_container1">
+				<div class="form_container1 taille_border">
 					<label for="email" id="text_email">Entrez votre adresse e-mail : </label>
 						<input type="email" name="email" id="email" placeholder="  Adresse mail :" 
 						pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="30" required
 						value =""><span class="error">* </span>
 				</div>
 				
-				<div class="form_container2">
+				<div class="form_container2 taille_border">
 					<label for="pass" id="text_pass">Entrez votre mot de passe : </label>
 						<input type="password" name="pass" id="pass" placeholder="  Mot de passe :" minlength="7" 
 						required
@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				</div>
 
 				<div class="form_container">
-						<input class="connexion_button" type="submit" value="Login">
+						<input class="connexion_button taille_border" type="submit" value="Login">
 				</div>
 			</form>
 		</div>

@@ -41,6 +41,11 @@ body {
     height: 48px;
 }
 
+.taille_border {
+    WIDTH: 50vw;
+    max-width: 400px;
+}
+
 #email,
 #pass {
     background-color: transparent;
@@ -69,7 +74,7 @@ body {
     padding-left: 5px;
     padding-top: 4px;
     font-size: 13px;
-    
+
 }
 
 .error {
@@ -101,6 +106,7 @@ label {
     border: 2px solid #F4F4F4;
     border-color: red;
     padding: 40px;
+
 }
 
 .connexion_button {
@@ -108,5 +114,4 @@ label {
     border-style: none;
     color: white;
     height: 50px;
-    width: 395px;
 }
