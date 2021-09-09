@@ -11,7 +11,7 @@
 
 body {
 
-    background-image: url(/images/front.png);
+    background-image: url(../images/front.png);
     background-size: cover;
     background-repeat: no-repeat;
 }

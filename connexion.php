@@ -78,10 +78,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				</div>
 
 				<div class="form_container">
-						<input class="connexion_button taille_border" type="submit" value="Login">
+						<input class="connexion_button taille_border" type="submit" value="Connexion">
 				</div>
 			</form>
 		</div>
+
 			<?php
 
 			//on inclue un fichier contenant nom_de_serveur, nom_bdd, login et password d'accès à la bdd mysql

@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Connexion WorkShop B2</title>
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/style_connexion.css">
+	<title>Inscription WorkShop B2</title>
+	<link rel="stylesheet" href="../WorkShop/css/style.css">
+	<link rel="stylesheet" href="../WorkShop/css/style_connexion.css">
 </head>
 
 <?php
@@ -57,29 +57,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
-	<div>
-		<h2>Welcome Back</h2>
+		<div class="ecran">
+		<h1 class="titre">Hello Welcome</h1>
 
 			<p><span class="error">* champs requis</span></p>
 
-		<div id="container_connexion" class="ls-0_5">
-			<form action="" method="POST" class="form_container">
-				<div class="form_container">
-					<label for="email">Adresse e-mail : </label>
-						<input type="email" name="email" id="email" placeholder="adresse mail" 
+			<div id="container_connexion" class="ls-0_5 taille_border">
+			<form action="" method="POST">
+				<div class="form_container1 taille_border">
+					<label for="email" id="text_email">Entrez votre adresse e-mail : </label>
+						<input type="email" name="email" id="email" placeholder="  Adresse mail :" 
 						pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="40" required
-						value =""><span class="error">*</span>
+						value ="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span>
 				</div>
 				
-				<div class="form_container">
-					<label for="pass">Mot de passe : </label>
-						<input type="password" name="pass" id="pass" placeholder="mot de passe" minlength="7" 
+				<div class="form_container2 taille_border">
+					<label for="pass" id="text_pass"> Entrez votre mot de passe : </label>
+						<input type="password" name="pass" id="pass" placeholder="  Mot de passe :" minlength="7" 
 						required
-						value =""><span class="error">*</span>
+						value ="<?php echo $pass;?>"><span class="error">* <?php echo $passErr;?></span>
 				</div>
 
 				<div class="form_container">
-						<input class="connexion_button" type="submit" value="Inscription">
+				<input class="connexion_button taille_border" type="submit" value="Inscription">
 				</div>
 			</form>
 		</div>
