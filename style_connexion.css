@@ -12,7 +12,7 @@
 body {
 
     background-image: url("front.png");
-    background-size: 1200px;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
