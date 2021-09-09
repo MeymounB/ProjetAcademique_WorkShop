@@ -1,0 +1,91 @@
+font
+
+top: -20px;
+left: 0px;
+width: 1920px;
+height: 1102px;
+background: transparent url('img/space_hdr_texture_of_stars_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_2189967_o.png') 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+opacity: 0.21;
+
+text haut
+
+top: 88px;
+left: 699px;
+width: 604px;
+height: 81px;
+text-align: center;
+font: normal normal normal 71px/114px Star Jedi;
+letter-spacing: 4.54px;
+color: #FC241C;
+text-transform: uppercase;
+opacity: 1;
+
+carre gauche
+
+top: 308px;
+left: 374px;
+width: 503px;
+height: 508px;
+background: var(--unnamed-color-27272f) 0% 0% no-repeat padding-box;
+background: #27272F 0% 0% no-repeat padding-box;
+box-shadow: 11px 5px 43px #00000029;
+border: 1px solid #FC241C;
+border-radius: 62px;
+opacity: 1;
+
+perso gauche
+
+top: 369px;
+left: 505px;
+width: 242px;
+height: 311px;
+background: transparent url('img/Screenshot 2021-09-07 at 17.29.09.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+
+texte gauche
+
+op: 666px;
+left: 392px;
+width: 468px;
+height: 77px;
+text-align: center;
+font: normal normal normal 48px/77px Star Jedi;
+letter-spacing: 3.07px;
+color: #21CAC2;
+text-transform: uppercase;
+opacity: 1;
+
+carre droit
+
+top: 308px;
+left: 1001px;
+width: 503px;
+height: 508px;
+background: var(--unnamed-color-27272f) 0% 0% no-repeat padding-box;
+background: #27272F 0% 0% no-repeat padding-box;
+box-shadow: 11px 5px 43px #00000029;
+border-radius: 62px;
+opacity: 1;
+
+perso droit
+
+top: 358px;
+left: 1133px;
+width: 239px;
+height: 322px;
+background: transparent url('img/Screenshot 2021-09-07 at 17.28.39.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+
+text droit 
+
+top: 666px;
+left: 1019px;
+width: 468px;
+height: 77px;
+text-align: center;
+font: normal normal normal 48px/77px Star Jedi;
+letter-spacing: 3.07px;
+color: #1A72E1;
+text-transform: uppercase;
+opacity: 1;
