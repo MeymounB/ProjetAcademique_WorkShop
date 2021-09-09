@@ -118,11 +118,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 			// si on obtient une réponse, alors l'utilisateur est un membre
 			//on ouvre une session pour cet utilisateur et on le connecte à l'espace membre
-			if ($data[0] == 1){
+			
 			session_start();
 			$_SESSION['email'] = $_POST['email'];
 			header('Location: accueil.php');
-			exit();}
+			exit();
 
 			//si le visiteur a saisi un mauvais login ou mot de passe, on ne trouve aucune réponse
 			elseif ($data[0] == 0) {

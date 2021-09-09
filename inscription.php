@@ -38,7 +38,7 @@
 				</div>
 
 				<div class="form_container">
-						<input class="connexion_button" type="submit" value="Connexion">
+						<input class="connexion_button" type="submit" value="Inscription">
 				</div>
 			</form>
 		</div>
