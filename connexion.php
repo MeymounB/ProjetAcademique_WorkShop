@@ -65,14 +65,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<form action="connexion.php" method="POST">
 				<div class="form_container1">
 					<label for="email" id="text_email">Entrez votre adresse e-mail : </label>
-						<input type="email" name="email" id="email" placeholder="adresse mail" 
+						<input type="email" name="email" id="email" placeholder="  Adresse mail :" 
 						pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.(com|fr)" maxlength="30" required
 						value =""><span class="error">* </span>
 				</div>
 				
 				<div class="form_container2">
 					<label for="pass" id="text_pass">Entrez votre mot de passe : </label>
-						<input type="password" name="pass" id="pass" placeholder="mot de passe" minlength="7" 
+						<input type="password" name="pass" id="pass" placeholder="  Mot de passe :" minlength="7" 
 						required
 						value =""><span class="error">* </span>
 				</div>
