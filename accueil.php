@@ -5,19 +5,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Accueil WorkShop B2</title>
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/style_accueil.css">
+	<link rel="stylesheet" href="../WorkShop//css/style.css">
+	<link rel="stylesheet" href="../WorkShop//css/style_accueil.css">
 	
 </head>
 
-<?php
-	session_start();
+-<?php
+	// session_start();
 
-	// Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+	// // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
 
-	if(!isset($_SESSION["username"])){
-		header("Location: connexion.php");
-		exit(); }
+	// if(!isset($_SESSION["username"])){
+	// 	header("Location: connexion.php");
+	// 	exit(); }
 ?>
 <body>
 		<!-- css : faire des carrés en opacity : 0,40 pour les div-->
@@ -27,7 +27,7 @@
 		<ul>
 			<li class="deroulant"><a href="#">Compte Battle &ensp;</a>
 				<ul class="sous">
-					<li><a href="/php/espace_membre.php">Profil</a></li>
+					<li><a href="espace_membre.php">Profil</a></li>
 					<li><a href="#">Deconnexion</a></li>
 				</ul>
 			</li>
@@ -37,9 +37,9 @@
 		<div class="container">
 			<div class="banniere container flexRow flexCol justify-sb align-center">
 				 
-					<img src="babyfoot_battle_titre.png" style="width : 100%;" alt="titre">
+					<img src="../WorkShop//images/babyfoot_battle_titre.png" style="width : 100%;" alt="titre">
 				
-					<img src="stormtroupers_battle.png" style="width : 100%;" alt="bannière">
+					<img src="../WorkShop//images/stormtroupers_battle.png" style="width : 100%;" alt="bannière">
 				</div>
 				<section class="bloc container">
 					<div class="explications">
@@ -52,10 +52,12 @@
 							allowfullscreen></iframe></div>
 
 
-							<div class="commandes ls-1 primarycolor">
+							<div class="commandes ls-1 primarycolor" style="padding: 25px;
+													background-color: rgba(0,0,0,0.5); 
+													border: 1px solid white;">
 								<h2>Les commandes sont divisés en deux parties : </h2>
 								<div class="flexRow flexCol justify-sb align-center">
-									<div class="thirdcolor" style="margin: right 10px;">
+									<div class="thirdcolor" style="margin-right: 10px;">
 										<p>Le camp des noirs à pour touches :</p> 
 									
 										<ul>
@@ -78,7 +80,7 @@
 
 									</div>
 
-									<div class="thirdcolor" style="margin: left 10px;">
+									<div class="thirdcolor" style="margin-left: 10px;">
 										<p>Le camp des blancs à pour tocuhes :</p>
 
 										<ul>

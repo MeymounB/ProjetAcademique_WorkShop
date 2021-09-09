@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Connexion WorkShop B2</title>
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./css/style_connexion.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/style_connexion.css">
 </head>
 
 <style>
@@ -17,8 +17,6 @@
 <body>
 
 	<?php
-
-session_start();
 
 // define variables and set to empty values
 $passErr = $emailErr = "";
@@ -64,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<p><span class="error">* champs requis</span></p>
 
 		<div id="container_connexion" class="ls-0_5">
-			<form action="connexion.php" method="POST" class="form_container">
+			<form action="" method="POST" class="form_container">
 				<div class="form_container">
 					<label for="email">Entrez votre adresse e-mail : </label>
 						<input type="email" name="email" id="email" placeholder="adresse mail" 

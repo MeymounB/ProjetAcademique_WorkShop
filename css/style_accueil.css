@@ -1,83 +1,88 @@
-*{
-margin: 0;
-padding: 0;
-font-family: 'Ubuntu', sans-serif;
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif;
 }
 
-body{
-	background: url(./background_starwars.png);
+body {
+	background: url(../../images/background_starwars.png);
 	background-repeat: repeat;
 }
 
-.page{
+.page {
 	margin-top: 70px;
 }
 
-nav{
-width: 150px;
-/*margin: 0 auto;*/
-/*background-color: ;*/
-position: fixed;
-top: 20px;
-right: 20px;
-z-index: 9999;
+nav {
+	width: 150px;
+	/*margin: 0 auto;*/
+	/*background-color: ;*/
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 9999;
 }
 
-nav ul{
-list-style-type: none;
-display: flex;
+nav ul {
+	list-style-type: none;
+	display: flex;
 }
 
-nav ul li{
-flex: 1 1 auto;
-text-align: center;
-position: relative;
+nav ul li {
+	flex: 1 1 auto;
+	text-align: center;
+	position: relative;
 }
 
-nav a{
-display: block;
-text-decoration: none;
-color: rgb(192, 192, 194);
-border-bottom: 2px solid transparent;
-padding: 10px 0px;
+nav a {
+	display: block;
+	text-decoration: none;
+	color: rgb(192, 192, 194);
+	border-bottom: 2px solid transparent;
+	padding: 10px 0px;
 }
 
-nav a:hover{
-color: rgb(252, 36, 28);
-border-bottom: 2px solid rgb(33, 202, 194);
+nav a:hover {
+	color: rgb(252, 36, 28);
+	border-bottom: 2px solid rgb(33, 202, 194);
 }
 
-.sous{
-display: none;
-box-shadow: 0px 1px 2px #CCC;
-background-color:rgb(20, 21, 24);
-position: absolute;
-width: 100%;
-z-index: 1000;
+.sous {
+	display: none;
+	box-shadow: 0px 1px 2px #CCC;
+	background-color: rgb(20, 21, 24);
+	position: absolute;
+	width: 100%;
+	z-index: 1000;
 }
-nav > ul li:hover .sous{
-display: flex;
-flex-flow: column wrap;
+
+nav>ul li:hover .sous {
+	display: flex;
+	flex-flow: column wrap;
 }
-.sous li{
-flex: 1 1 auto;
-text-align: left;
+
+.sous li {
+	flex: 1 1 auto;
+	text-align: left;
 }
-.sous a{
-padding: 10px;
-border-bottom: none;
+
+.sous a {
+	padding: 10px;
+	border-bottom: none;
 }
-.sous a:hover{
-border-bottom: none;
-background-color: RGBa(200,200,200,0.1);
+
+.sous a:hover {
+	border-bottom: none;
+	background-color: RGBa(200, 200, 200, 0.1);
 }
-.deroulant > a::after{
-content:"▼";
-font-size: 12px;
+
+.deroulant>a::after {
+	content: "▼";
+	font-size: 12px;
 }
 
 
-.banniere{
+.banniere {
 	display: block;
 }
 
@@ -89,10 +94,11 @@ font-size: 12px;
 
 }
 */
-.scratch{
+.scratch {
 	min-width: 400px;
 
 }
+
 /*
 .commandes{
 
