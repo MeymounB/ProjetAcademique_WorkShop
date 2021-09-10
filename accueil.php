@@ -35,6 +35,9 @@
 							<li ><a href="statistiques.php">Statistiques</a></li>
 						</div>
 						<div class="deco">
+							<li ><a href="statistiques.php">Tournois</a></li>
+						</div>
+						<div class="deco">
 
 							<li ><a href="connexion.php">Deconnexion</a></li>
 				
