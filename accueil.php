@@ -20,7 +20,7 @@
 	// 	exit(); }
 ?>
 <body>
-		<!-- css : faire des carrés en opacity : 0,40 pour les div-->
+		
 	<div class="page">
 
 	<nav>
@@ -32,8 +32,11 @@
 							<li ><a href="espace_membre.php">Profil</a></li>
 						</div>
 						<div class="deco">
+							<li ><a href="statistiques.php">Statistiques</a></li>
+						</div>
+						<div class="deco">
 
-							<li ><a href="#">Deconnexion</a></li>
+							<li ><a href="connexion.php">Deconnexion</a></li>
 				
 						</div>
 			</div>

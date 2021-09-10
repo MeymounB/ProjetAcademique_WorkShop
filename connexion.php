@@ -95,6 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$bdd = new PDO('mysql:host=localhost;dbname=workshop;charset=utf8', 'root', '');
 			if (!$bdd) {echo "LA CONNEXION AU SERVEUR MYSQL A ECHOUE\n"; exit;};
 
+
 			$requete = $bdd->prepare("SELECT pk FROM membres WHERE email=? AND pass=?");
 				$requete->execute([$_POST['email'],$_POST['pass']]);
 				$lignes = $requete->fetchAll();
