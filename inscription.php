@@ -13,8 +13,8 @@
 <?php
 
 // define variables and set to empty values
-$passErr = $emailErr = "";
-$pass = $email = "";
+$passErr = $emailErr = $pseudoErr = "";
+$pass = $email = $pseudo = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (empty($_POST["email"])) {
@@ -35,9 +35,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$passErr = "Le format du mot de passe est invalide";
 	}
 	}
+	if (empty($_POST["pseudo"])) {
+		$pseudoErr = "Le pseudo est necessaire";
+		} else {
+		$pseudo = test_input($_POST["pseudo"]);
+		// check if pseudo is well-formed
+		if (!preg_match("/^[a-zA-Z-' ]*$/", $pseudo)) {
+			$pseudoErr = "Le format du pseudo est invalide";
+		}
+		}
 }	
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$pseudo = test_input($_POST["pseudo"]);
 	$pass = test_input($_POST["pass"]);
 	$email = test_input($_POST["email"]);
 	}
@@ -64,6 +74,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 			<div id="container_connexion" class="ls-0_5 taille_border">
 			<form action="" method="POST">
+
+				<div class="form_container2 taille_border">
+						<label for="pseudo" id="text_pass">Entrez votre pseudo : </label>
+							<input type="text" name="pseudo" id="pass" placeholder="  Pseudo :" 
+							maxlength="40" required
+							value ="<?php echo $pseudo;?>"><span class="error">* <?php echo $pseudoErr;?></span>
+				</div>
+
 				<div class="form_container1 taille_border">
 					<label for="email" id="text_email">Entrez votre adresse e-mail : </label>
 						<input type="email" name="email" id="email" placeholder="  Adresse mail :" 
@@ -90,16 +108,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			include ("connect.php");
 
 			//on vérifie que le visiteur a correctement saisi puis envoyé le formulaire
-			if ((isset($_POST['email']) && !empty($_POST['email'])) && (isset($_POST['pass']) && !empty($_POST['pass']))) {
+			if ((isset($_POST['pseudo']) && !empty($_POST['pseudo'] )) && (isset($_POST['email']) && !empty($_POST['email'])) && (isset($_POST['pass']) && !empty($_POST['pass'])) ) {
 
 			//on se connecte à la bdd
 			$bdd = new PDO('mysql:host=localhost;dbname=workshop;charset=utf8', 'root', '');
 			if (!$bdd) {echo "LA CONNEXION AU SERVEUR MYSQL A ECHOUE\n"; exit;};
 
-			$requete = $bdd->prepare("INSERT into membres(email, pass)
-							VALUES(?,?)");
+			$requete = $bdd->prepare("INSERT into membres(pseudo, email, pass)
+							VALUES(?,?,?)");
 
-			$requete->execute([$_POST['email'],$_POST['pass']]);
+			$requete->execute([$_POST['pseudo'],$_POST['email'],$_POST['pass']]);
 			header('Location: accueil.php');}
 
 			?> 

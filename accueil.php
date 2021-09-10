@@ -77,8 +77,8 @@
 												</ul>
 											<li>Attaque :</li>
 												<ul>
-													<li>E : 👆</li>
-													<li>D : 👇</li>
+													<li>I : 👆</li>
+													<li>K : 👇</li>
 												</ul>
 										</ul>
 
@@ -100,8 +100,8 @@
 												</ul>
 											<li>Attaque :</li>
 												<ul>
-													<li>I : 👆</li>
-													<li>K : 👇</li>
+													<li>E : 👆</li>
+													<li>D : 👇</li>
 												</ul>
 										</ul>
 									</div>

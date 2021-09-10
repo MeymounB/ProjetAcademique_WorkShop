@@ -1,0 +1,21 @@
+@font-face {
+	font-family: "StarJedi";
+	src: url(./Starjedi.ttf);
+}
+
+body {
+	background-image: url(../images/background_starwars.png);
+	background-repeat: repeat;
+}
+
+.page {
+	margin-top: 70px;
+}
+
+.titre {
+	font-family: "StarJedi";
+}
+
+h2 {
+	font-family: "StarJedi";
+}
