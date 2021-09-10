@@ -16,7 +16,7 @@
 	<!-- page -->
 		<div class="page container"> 
 			<!-- titre  -->
-			<div class="primarycolor">
+			<div class="primarycolor" style="    border: 1px red solid;">
 				<h1 style="margin-left: auto;
 					margin-right: auto; width: 15%;">Profile</h1>
 			</div>
