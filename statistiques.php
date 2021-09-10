@@ -23,9 +23,8 @@
   style="right:0; top:10vh; position:absolute;"
   ></div>  
 
-  <p class="primarycolor font-20" style="position:absolute; top:20vh; right:50vh;">Veuillez vous en aller. Ce domaine est en construction.</p>
+  <p class="primarycolor font-20" style="position:absolute; top:20vh; right:50vh;">veuillez vous en aller. Ce domaine est en construction.</p>
 
   <div><a href="accueil.php" class="font-25" style="position:absolute; top:30vh; left:80vh;">Retour à l'accueil</a></div>
   
-</body>
-</html>
+</body>   

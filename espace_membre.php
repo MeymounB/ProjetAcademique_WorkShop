@@ -8,9 +8,7 @@
 	<link rel="stylesheet" href="../WorkShop/css/style.css">
 	<link rel="stylesheet" href="../WorkShop/css/style_espace_membre.css">
 
-	<?php 
-		$bdd = new PDO('mysql:host=localhost;dbname=workshop;charset=utf8', 'root', '');
-	?>
+	
 </head>
 <body>	
 	<!-- page -->
